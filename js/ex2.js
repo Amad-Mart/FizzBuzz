@@ -1,6 +1,6 @@
 //takes user input and print numbers to the page
 //keep business logic from display logic
-function printNumbers() {
+function fizzBuzz() {
     let startNum = parseInt(document.getElementById("numOne").value);
     let endNum = parseInt(document.getElementById("numTwo").value);
     let numbers = getRange(startNum, endNum + 1);
