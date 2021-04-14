@@ -3,7 +3,7 @@
 function printNumbers() {
     let startNum = parseInt(document.getElementById("numOne").value);
     let endNum = parseInt(document.getElementById("numTwo").value);
-    let numbers = getRange(startNum, endNum+1);
+    let numbers = getRange(startNum, endNum + 1);
     displayData(numbers);
 }
 
@@ -22,6 +22,8 @@ function getRange(start, end) {
 function displayData(numbers) {
     const rowTemplate = document.getElementById("Data-Template");
     const resultsBody = document.getElementById("resultsBody");
+    let fizzNum = parseInt(document.getElementById("multFizz").value);
+    let buzzNum = parseInt(document.getElementById("multBuzz").value);
 
     // this makes display numbers truly dynamic 
     //creates a clone of content in rowTemplate, selects all td elements, then gets length number
@@ -41,11 +43,18 @@ function displayData(numbers) {
             let myValue = numbers[rowIndex + colIndex];
             if (typeof myValue === "undefined") {
                 myValue = "";
+            } else if (myValue % fizzNum == 0 && myValue % buzzNum == 0) {
+                cols[colIndex].classList.add("boldBoth");
+                myValue = "FizzBuzz";
             }
             //major hint for fizzbuzz
             //makes even numbers bold
-            else if (myValue % 2 == 0) {
-                cols[colIndex].classList.add("boldIt");
+            else if (myValue % fizzNum == 0) {
+                cols[colIndex].classList.add("boldBuzz");
+                myValue = "Fizz";
+            } else if (myValue % buzzNum == 0) {
+                cols[colIndex].classList.add("boldFizz");
+                myValue = "Buzz";
             }
             // sets td's content 
             cols[colIndex].textContent = myValue;

@@ -17,9 +17,17 @@ nav {
     background-color: darkgoldenrod;
 }
 
-.boldIt {
+.boldBuzz {
     font-weight: bolder;
-    color: coral;
+    color: blue;
+}
+.boldFizz {
+    font-weight: bolder;
+    color:red;
+}
+.boldBoth {
+    font-weight: bolder;
+    color: purple;
 }
 
 @media (min-width: 768px) {
