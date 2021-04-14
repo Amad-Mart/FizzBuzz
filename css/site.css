@@ -1,20 +1,17 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 html,
-body {
-    height: 100%;
+body, .jumbotron, footer {
+   background: #D3CCE3;
+   /* fallback for old browsers */
+   background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+   /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 nav {
     background-color: darkblue;
-}
-
-.foooter {
-    background-color: blueviolet;
-}
-
-.header {
-    background-color: darkgoldenrod;
 }
 
 .boldBuzz {
@@ -29,27 +26,16 @@ nav {
     font-weight: bolder;
     color: purple;
 }
-
-@media (min-width: 768px) {
-    .header {
-        background-image: url(/img/W2D3.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: fixed;
-        background-color: dimgray;
-    }
-
-    .hero {
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 10px 0;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
+.inputText{
+    margin-left: 200px;
+}
+.inputText2 {
+    margin-left: 206px;
+}
+.inputText3 {
+    margin-left: 100px;
+}
+.inputText4 {
+    margin-left: 50px;
 }
 
-.foooter>.container {
-    padding-right: 15px;
-    padding-left: 15px;
-}
